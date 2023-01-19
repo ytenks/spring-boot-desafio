@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.meta3.desafiometa3.User;
+import com.meta3.desafiometa3.classes.User;
 
 @RestController
 @RequestMapping(value = "/users")
