@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.meta3.desafiometa3.classes.Post;
+import com.meta3.desafiometa3.classes.User;
 import com.meta3.desafiometa3.repositories.PostRepository;
 
 @Service
@@ -23,4 +24,8 @@ public Post findById(Long id) {
 	return obj.get();
 }
 
+public Post insert(Post obj) {
+	
+	return repository.save(obj);
+}
 }
