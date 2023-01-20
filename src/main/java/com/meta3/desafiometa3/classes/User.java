@@ -1,12 +1,17 @@
 package com.meta3.desafiometa3.classes;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 
@@ -23,9 +28,18 @@ public class User implements Serializable {
     private String name;
     private String nickname;
     private boolean according;
+
+	public User(){
+		
+	}
+	@JsonIgnore
+	@OneToMany(mappedBy = "client")
+    private List<Order> orders = new ArrayList<>();
     
-    public User(){}
-    
+    public List<Order> getOrders() {
+		return orders;
+	}
+
 	public Long getId() {
 		return id;
 	}

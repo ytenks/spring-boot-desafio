@@ -1,10 +1,10 @@
 package com.meta3.desafiometa3.classes;
 
-public class Posts {
+public class Postagem {
 	
 	private String conteudo;
 	private String data;
-	public Posts(String conteudo, String data) {
+	public Postagem(String conteudo, String data) {
 		super();
 		this.conteudo = conteudo;
 		this.data = data;
